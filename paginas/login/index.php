@@ -10,21 +10,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="../styles/form.css">
+  <link rel="stylesheet" href="../../styles/form.css">
 
   <title>Projetinho felas</title>
-
-
 </head>
 
 <body>
-
   <div class="container">
     <div class="login">
       <div class="title">
         <h1 class="title-card">LOGIN</h1>
-        <p class="description-card">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam vitae magnam
-        </p>
+        <p class="description-card">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam vitae magnam</p>
       </div>
 
       <form>
@@ -53,7 +49,7 @@
       </form>
 
       <div class="links">
-        <a href="../register/register.html"> Criar conta </a>
+        <a href="../register/"> Criar conta </a>
         <a href="#"> Esqueceu a senha?</a>
       </div>
 
@@ -62,5 +58,4 @@
 
   <script src="main.js"></script>
 </body>
-
 </html>
