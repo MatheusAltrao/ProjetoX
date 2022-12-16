@@ -17,27 +17,30 @@
 
     $nomeBD = "projetoX";
 
-    #Criação do Banco de Dados, caso não exista;
-    $create = "CREATE SCHEMA IF NOT EXISTS $nomeBD";
-    $conexao->query($create);
-
-    if($conexao->query($create) === true)
-    {
-        echo "<p>Banco de Dados criado</p>";
-    }
-    else
-    {
-        echo "<p>Banco de Dados não criado</p>";
-    }
-
     mysqli_select_db($conexao, $nomeBD);
 
     #Criação das tabelas;
-    $tabelas = "CREATE TABLE usuario(
+    $tabela = "CREATE TABLE atuacao(
         id int AUTO_INCREMENT PRIMARY KEY,
         nome varchar(200) NOT NULL,
-        email varchar(200) NOT NULL,
-        senha varchar(32) NOT NULL,
-        anoEscolar int NOT NULL)";
-    $conexao->query($tabelas);
+        descricao text NOT NULL);";
+    $conexao->query($tabela);
+
+    $tabela = "CREATE TABLE profissao(
+        id int AUTO_INCREMENT PRIMARY KEY,
+        nome varchar(200) NOT NULL,
+        mediaSalarial double not null,
+        idAtuacao int not null,
+        constraint fkAtuaProf foreign key (idAtuacao) references atuacao (id));";
+    $conexao->query($tabela);
+
+    $tabela = "CREATE TABLE relatos(
+        id int auto_increment primary key,
+        relato mediumtext not null,
+        dataHora datetime not null,
+        idUsuario int not null,
+        constraint fkUsuRel foreign key (idUsuario) references usuario (id),
+        idProfissao int not null,
+        constraint fkProfRel foreign key (idProfissao) references profissao(id));";
+    $conexao->query($tabela);
 ?>

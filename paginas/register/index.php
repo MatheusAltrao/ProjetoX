@@ -22,22 +22,21 @@
         <h1 class="title-card">Registrar</h1>
         <p class="description-card">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam vitae magnam</p>
       </div>
-      <form>
-
+      <form method="POST" action="../../controladores/usuario/add.php">
         <label>
           Nome:
-          <input class="input" type="text" placeholder="Insira o seu nome">
+          <input class="input" type="text" placeholder="Insira o seu nome" name="campoNome">
         </label>
 
         <label>
           E-mail:
-          <input class="input registerInputEmail" type="email" placeholder="Insira o seu e-mail">
+          <input class="input registerInputEmail" type="email" placeholder="Insira o seu e-mail" name="campoEmail">
         </label>
 
         <div class="box">
           <label>
             Senha:
-            <input class="input registerPassword" type="password" placeholder="Insira a sua senha" minlength="8">
+            <input class="input registerPassword" type="password" placeholder="Insira a sua senha" minlength="8" name="campoSenha">
 
             <svg id="eye1" class="icon-eye" version="1.1" xmlns="http://www.w3.org/2000/svg" width="23" height="23"
               viewBox="0 0 768 768">
@@ -49,8 +48,7 @@
 
           <label class="confirmpassword">
             Confirmar Senha:
-            <input class="input registerConfirmInputPassword  " type="password" placeholder="Insira a sua senha"
-              minlength="8">
+            <input class="input registerConfirmInputPassword" type="password" placeholder="Insira a sua senha" minlength="8">
 
             <svg id="eye2" class="icon-eye-2" version="1.1" xmlns="http://www.w3.org/2000/svg" width="23" height="23"
               viewBox="0 0 768 768">
@@ -63,7 +61,7 @@
           </label>
         </div>
 
-        <input type="submit" class="submit" value="Registrar">
+        <button type="submit" class="submit"> Registrar </button>
       </form>
     </div>
   </div>
